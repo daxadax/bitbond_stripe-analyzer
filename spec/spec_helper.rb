@@ -1,6 +1,7 @@
 ENV['RACK_ENV'] = 'test'
 
 require 'sinatra'
+require 'sinatra/activerecord'
 require 'bundler'
 require 'stripe'
 Bundler.require

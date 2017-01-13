@@ -16,7 +16,7 @@ class StripeAnalyzer < Sinatra::Application
   get '/stripe_callback' do
     auth_code = request['code']
     token = get_stripe_token(auth_code)
-    User.save(token)
+    User.create_from_token(token)
   end
 
   private
