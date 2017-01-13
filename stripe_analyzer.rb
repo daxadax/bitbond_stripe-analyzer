@@ -27,6 +27,7 @@ class StripeAnalyzer < Sinatra::Application
 
   private
 
+  #NOTE extract these connection urls so the responses are easy to mock in tests
   def stripe_connect_url
     url = "#{stripe_base_url}/authorize?"
     url += "response_type=code&"
