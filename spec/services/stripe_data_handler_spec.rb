@@ -2,7 +2,7 @@ require_relative '../spec_helper'
 
 class Services::StripeDataHandlerSpec < BaseSpec
   let(:service) { Services::StripeDataHandler }
-  let(:user_id) { 23 }
+  let(:user) { User.create(stripe_user_id: 23) }
   let(:injected_services) do
     {
       analysts: fake_analysts,
@@ -11,7 +11,7 @@ class Services::StripeDataHandlerSpec < BaseSpec
   end
 
   before do
-    service.new(user_id, injected_services).perform
+    service.new(user.id, injected_services).perform
   end
 
   after do
