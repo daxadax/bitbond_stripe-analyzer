@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  host: localhost
+  database: stripe_analyzer
+  username: hagbard
+  password:
