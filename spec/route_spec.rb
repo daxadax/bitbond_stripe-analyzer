@@ -24,6 +24,10 @@ class RouteSpec < BaseSpec
         skip
       end
 
+      it 'runs the analyst service' do
+        skip
+      end
+
       it 'renders the successful connection page' do
         skip
       end
