@@ -2,6 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 require 'dotenv'
 require 'sass'
+require 'sass/plugin/rack'
 require 'stripe'
 
 Dotenv.load
