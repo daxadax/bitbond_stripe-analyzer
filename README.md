@@ -21,3 +21,8 @@
 ####Admin (/admin)
 
 1. Serve analyzed data using Dimple.js
+
+--- 
+
+After four hours of implementation, I completed steps 1 and 2 of the proposed
+flow, although step 2 is not well tested.
