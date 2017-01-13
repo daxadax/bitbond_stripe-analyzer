@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113151653) do
+ActiveRecord::Schema.define(version: 20170113183004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "stripe_user_accounts", force: :cascade do |t|
+    t.string "stripe_user_id"
+    t.json   "balance"
+    t.json   "charges"
+    t.json   "disputes"
+    t.json   "refunds"
+    t.json   "subscriptions"
+    t.json   "transfers"
+    t.json   "bank_accounts"
+    t.json   "orders"
+    t.json   "returns"
+    t.json   "payment_methods"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "access_token"

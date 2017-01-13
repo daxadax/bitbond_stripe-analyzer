@@ -1,6 +1,9 @@
 require_relative '../spec_helper'
 
 class UserSpec < BaseSpec
+  #clean the database
+  after { User.delete_all }
+
   let(:token) do
     {
       "access_token"=>"sk_test_QqCrbQLg1A8tGBLS77Vjgg84",
