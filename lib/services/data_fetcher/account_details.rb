@@ -5,6 +5,10 @@ module Services
         new(stripe_user_id).perform
       end
 
+      def perform
+        # to be implemented
+      end
+
       private
 
       def fetch_data
