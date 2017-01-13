@@ -12,7 +12,7 @@ use Sass::Plugin::Rack
 
 Stripe.api_key = ENV['STRIPE_API_KEY']
 
-Dir.glob('./lib/*.rb') { |f| require f }
+Dir.glob('./lib/**/*.rb') { |f| require f }
 require './stripe_analyzer'
 
 run StripeAnalyzer
