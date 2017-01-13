@@ -21,7 +21,7 @@ class StripeAnalyzer < Sinatra::Application
       haml :unsuccessful_connection
     else
       user = User.create_from_token(token)
-      Services::Analyst.perform_async(user.id)
+      Services::StripeDataHandler.perform_async(user.id)
       haml :successful_connection
     end
   end
