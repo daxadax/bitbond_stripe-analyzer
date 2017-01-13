@@ -15,8 +15,14 @@ class StripeAnalyzer < Sinatra::Application
 
   get '/stripe_callback' do
     auth_code = request['code']
-    json_token = get_stripe_token(auth_code)
-    User.create_from_token(JSON.parse(json_token))
+    token = JSON.parse(get_stripe_token(auth_code))
+
+    if token['error']
+      haml :unsuccessful_connection
+    else
+      User.create_from_token(token)
+      haml :successful_connection
+    end
   end
 
   private

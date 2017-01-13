@@ -19,12 +19,30 @@ class RouteSpec < BaseSpec
       assert_equal 200, result.status
     end
 
-    it 'fetches a token and uses it to build a new User' do
-      skip
+    describe 'when the connection succeeds' do
+      it 'fetches a token and uses it to build a new User' do
+        skip
+      end
+
+      it 'renders the successful connection page' do
+        skip
+      end
+
+      describe 'when the user has already been connected' do
+        it 'does not build a new User if one is already present' do
+          skip
+        end
+      end
     end
 
-    it 'does not build a new User if one is already present' do
-      skip
+    describe 'when the connection fails' do
+      it 'does not build a new User' do
+        skip
+      end
+
+      it 'renders the unsuccessful connection page' do
+        skip
+      end
     end
   end
 end
