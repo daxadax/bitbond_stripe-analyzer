@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'dotenv'
+gem 'haml'
 gem 'pg'
 gem 'rake'
 gem 'sinatra'

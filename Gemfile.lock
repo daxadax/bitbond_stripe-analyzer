@@ -17,6 +17,8 @@ GEM
     domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
+    haml (4.0.7)
+      tilt
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -60,6 +62,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  haml
   minitest
   pg
   rack-test
